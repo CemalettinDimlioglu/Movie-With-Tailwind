@@ -2,8 +2,10 @@
  import { Link } from "react-router-dom";
  import avatar from "../assets/icons/avatar.png";
  import { AuthContext } from "../context/AuthContext";
+import Switch from "./Switch";
+
  const Navbar = () => {
-   const { currentUser } = useContext(AuthContext);
+   const { currentUser,logOut } = useContext(AuthContext);
    //  const currentUser = { displayName: "Mike Jones" };
    // const currentUser = false;
    return (
@@ -22,6 +24,7 @@
              {currentUser && (
                <h5 className="mr-2 capitalize">{currentUser.displayName}</h5>
              )}
+             <Switch/>
              <div className="relative" data-te-dropdown-ref="">
                <span
                  className="hidden-arrow flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none"
@@ -67,7 +70,7 @@
                      className="block w-full whitespace-nowrap bg-transparent py-2 px-4 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
                      role="button"
                      data-te-dropdown-item-ref=""
-                    
+                     onClick={() => logOut()}
                    >
                      Logout
                    </span>

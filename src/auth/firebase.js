@@ -7,7 +7,7 @@
  // See: https://firebase.google.com/docs/web/learn-more#config-object
  const firebaseConfig = {
    apiKey:  "AIzaSyDZU3rklkqCgRu2W6oS3ZrXwE148EkK-QQ",
-   authDomain: process.env.REACT_APP_authDomain,
+   authDomain: "movie-tailwind-app.firebaseapp.com",
    projectId: process.env.REACT_APP_projectId,
    storageBucket: process.env.REACT_APP_storageBucket,
    messagingSenderId: process.env.REACT_APP_messagingSenderId,

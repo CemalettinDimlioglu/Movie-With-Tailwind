@@ -84,6 +84,7 @@ const Register = () => {
           <button
             className="flex justify-between text-center btn-danger"
             type="button"
+            onClick={() => signUpProvider()}
           >
             Continue with Google
             <GoogleIcon color="currentColor" />
